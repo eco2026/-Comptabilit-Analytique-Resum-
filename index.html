@@ -1,1 +1,456 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Comptabilité Analytique - S4ECO | Fiches de révision</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eef2f5;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            color: #1a2c3e;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* header */
+        .hero {
+            background: linear-gradient(135deg, #0b2b3b, #1a4a5f);
+            color: white;
+            padding: 2rem 2rem;
+            border-radius: 36px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+            transition: all 0.2s;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero h1 span {
+            background: #ffc107;
+            color: #1a2c3e;
+            font-size: 1rem;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+
+        .hero p {
+            margin-top: 0.75rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .meta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 1rem;
+        }
+
+        /* cards */
+        .section-card {
+            background: white;
+            border-radius: 28px;
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.1s ease;
+        }
+
+        .section-header {
+            background: #f8fafc;
+            padding: 1.2rem 2rem;
+            border-bottom: 2px solid #dce5ec;
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .section-header h2 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #1f5e74;
+            letter-spacing: -0.2px;
+        }
+
+        .section-header .badge {
+            background: #e2eaf1;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1f5e74;
+        }
+
+        .content-inner {
+            padding: 1.8rem 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            margin: 1rem 0 1.2rem 0;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+        }
+
+        th {
+            background: #e9f0f5;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid #cbdde6;
+        }
+
+        td {
+            padding: 10px 10px;
+            border-bottom: 1px solid #e9edf2;
+            vertical-align: top;
+        }
+
+        .highlight {
+            background: #fef9e6;
+            border-left: 4px solid #f4b942;
+            padding: 0.8rem 1.2rem;
+            border-radius: 16px;
+            margin: 1rem 0;
+        }
+
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.2rem 0;
+        }
+
+        .example-box {
+            background: #f4f9fe;
+            border-radius: 20px;
+            padding: 1.2rem;
+            border: 1px solid #dde6ef;
+        }
+
+        .example-box h4 {
+            color: #1f5e74;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .formula {
+            font-family: 'Courier New', 'Fira Code', monospace;
+            background: #1e2f3a;
+            color: #eef4ff;
+            padding: 0.3rem 0.7rem;
+            border-radius: 12px;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+
+        .inline-code {
+            background: #eef2f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #ccc, transparent);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            font-size: 0.8rem;
+            color: #5f7f90;
+        }
+
+        @media (max-width: 680px) {
+            .content-inner {
+                padding: 1.2rem;
+            }
+            .section-header h2 {
+                font-size: 1.3rem;
+            }
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <h1>📊 Comptabilité Analytique <span>S4ECO - 2025/2026</span></h1>
+        <p>Pr. Youssef RACHID – FEG Settat | Résumé structuré : CG vs CAE, coûts, stocks, centres d'analyse, seuil de rentabilité</p>
+        <div class="meta">
+            <span>📘 Outil de gestion interne</span>
+            <span>🎯 Coûts & décisions</span>
+            <span>⚖️ Flexibilité & analyse</span>
+        </div>
+    </div>
+
+    <!-- CHAPITRE INTRO -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>📌 Introduction • CG vs CAE</h2>
+            <div class="badge">vision détaillée</div>
+        </div>
+        <div class="content-inner">
+            <p><strong>Définition :</strong> quantifier les flux internes, répondre à <em>« qui consomme quoi ? qui produit combien ? »</em></p>
+            <table>
+                <thead><tr><th>Critère</th><th>Comptabilité Générale</th><th>Comptabilité Analytique</th></tr></thead>
+                <tbody>
+                    <tr><td>Obligation</td><td>Obligatoire</td><td>Facultative</td></tr>
+                    <tr><td>Vision</td><td>Globale</td><td>Détaillée</td></tr>
+                    <tr><td>Horizon</td><td>Passé</td><td>Présent & Futur</td></tr>
+                    <tr><td>Classement charges</td><td>Par nature</td><td>Par destination</td></tr>
+                    <tr><td>Nature infos</td><td>Précises, certifiées</td><td>Rapides, pertinentes, approchées</td></tr>
+                </tbody>
+            </table>
+            <div class="highlight">
+                <strong>🏭 Exemple ANWAL :</strong> Résultat CG = 97 500 DH (global) → CAE révèle Produit A = +105 000 DH, Produit B = -7 500 DH → décision stratégique.
+            </div>
+        </div>
+    </div>
+
+    <!-- CHAPITRE 1 : Charges CAE -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>💰 Chapitre 1 • Charges de la CAE</h2>
+            <div class="badge">charge CAE = f(CG, supplétives, non incorporables)</div>
+        </div>
+        <div class="content-inner">
+            <p class="formula" style="background:#1f5e74; margin-bottom: 1rem;">Charge CAE = Charges CG - Charges non incorporables + Charges supplétives ± Charges calculées</p>
+            <div class="grid-2col">
+                <div class="example-box">
+                    <h4>🚫 Non incorporables</h4>
+                    <ul style="margin-left: 1rem;">
+                        <li>Primes d'assurance-vie (PDG)</li>
+                        <li>VNA cession, pénalités fiscales</li>
+                        <li>Amortissements immobilisations non valeur</li>
+                        <li>Provisions, impôts sur résultat</li>
+                    </ul>
+                </div>
+                <div class="example-box">
+                    <h4>➕ Charges supplétives</h4>
+                    <ul><li>Rémunération théorique de l'exploitant</li><li>Rémunération théorique des capitaux propres</li></ul>
+                    <h4 style="margin-top: 0.8rem;">🔄 Charges calculées</h4>
+                    <ul><li>Charge d’usage (exemple machine amortie en CG mais valeur actuelle)</li><li>Charge abonnée (loyer sur durée réelle travaillée)</li></ul>
+                </div>
+            </div>
+            <div class="highlight">
+                <strong>📐 Cas PROLEC :</strong> CG mensualisée = 607 960 DH ; + supplétive capitaux 15 000 DH ; - pénalité 2 500 ; + charge d’usage 1 400 → <strong>CAE = 621 860 DH</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHAPITRE 2 : Hiérarchie coûts (commercial + industriel) -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>🏷️ Chapitre 2 • Coûts : commercial & industriel</h2>
+            <div class="badge">CMUP • coût de revient • résultat analytique</div>
+        </div>
+        <div class="content-inner">
+            <h3 style="margin-bottom: 8px;">📦 Entreprise commerciale</h3>
+            <p>Coût d'achat → Inventaire permanent (CMUP) → Coût de revient = coût d'achat des marchandises vendues + coût distribution → Résultat analytique</p>
+            <div class="example-box" style="margin-top: 0.5rem;">
+                <strong>Cas CHOUJAA (téléviseurs) :</strong> Coût d’achat unitaire = 4 375 DH ; CMUP = 4 540 DH ; Coût de revient 800 télés = 3 696 000 DH ; CA = 4 800 000 → <strong>Résultat = 1 104 000 DH</strong>
+            </div>
+            <h3 style="margin: 1.2rem 0 8px 0;">🏭 Entreprise industrielle</h3>
+            <p>Coût d'achat MP → Inventaire MP → Coût production PF → Inventaire PF → Coût de revient PF vendus → Résultat analytique</p>
+            <div class="example-box">
+                <strong>Alpha (récipients) :</strong> Coût d’achat plaque 159 DH ; CMUP plaques 165,6 ; coût de production 5 000 récipients = 128 520 DH (25,70/unité) ; CMUP récipients = 26,11 DH ; coût revient 4 500 vendus = 193 995 DH ; CA = 270 000 → <strong>Résultat = 76 005 DH</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHAPITRE 3 : Méthodes évaluation stocks -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>📦 Chapitre 3 • Évaluation des stocks</h2>
+            <div class="badge">CMUP • FIFO • LIFO</div>
+        </div>
+        <div class="content-inner">
+            <p><strong>Société BETA – février 2021 :</strong> SI 100 × 10 DH, sortie 50, entrée 150×12, sortie 80, entrée 200×13</p>
+            <table>
+                <tr><th>Méthode</th><th>Valeur sorties</th><th>Stock final</th></tr>
+                <tr><td>CMUP après chaque entrée</td><td>500 + 920 = 1 420 DH</td><td>320×12,44 ≈ 3 980 DH</td></tr>
+                <tr><td>CMUP fin de période</td><td>130 × 12 = 1 560 DH</td><td>220×12 = 2 640 DH</td></tr>
+                <tr><td>FIFO</td><td>500 + (50×10+30×12)= 1 360 DH</td><td>—</td></tr>
+                <tr><td>LIFO</td><td>500 + (80×12) = 1 460 DH</td><td>—</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- CHAPITRE 4 : Centres d'analyse & répartition -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>⚙️ Chapitre 4 • Centres d'analyse & prestations réciproques</h2>
+            <div class="badge">clés de répartition • unités d’œuvre</div>
+        </div>
+        <div class="content-inner">
+            <p><strong>Types :</strong> Centres principaux (Appro, Prod, Distrib) / auxiliaires (RH, entretien) / structure.</p>
+            <div class="highlight">
+                <strong>Répartition primaire (MALI) :</strong> total 262 000 DH réparti entre Gest.pers, Gest.mat, Appro, Fabric, Distrib via clés (énergie, salaires...). Exemple : frais entretien 5 000 DH répartis selon surfaces.
+            </div>
+            <div class="grid-2col">
+                <div class="example-box">
+                    <h4>Répartition secondaire (exemple ateliers)</h4>
+                    <p>Gestion moyens matériels (100 650) redistribué à Atelier1(40%), Atelier2(40%), Condition.(10%), Distrib(10%) → totaux secondaires : At1 =163 310 , At2=134 460, etc.</p>
+                </div>
+                <div class="example-box">
+                    <h4>Unités d’œuvre</h4>
+                    <p>Atelier1 : 1 250 h MOD → Coût UO = 130,65 DH<br>Atelier2 : 1 000 h MOD → 134,46 DH<br>Distribution : 12,166% du CA</p>
+                </div>
+            </div>
+            <div class="highlight">
+                <strong>🔁 Prestations réciproques :</strong> Système E = 5 688 + 10% T ; T = 9 972 + 10% E → résolution donne E = 7 230 , T = 10 920.
+            </div>
+        </div>
+    </div>
+
+    <!-- CHAPITRE 5 : En-cours & produits résiduels -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>🔄 Chapitre 5 • En-cours & éléments correctifs</h2>
+            <div class="badge">coût production = charges + encours initial - encours final</div>
+        </div>
+        <div class="content-inner">
+            <p>Formule : <span class="inline-code">Coût production = Charges de production + En-cours initial - En-cours final</span></p>
+            <p><strong>Produits résiduels :</strong></p>
+            <ul>
+                <li>Vendable → valeur = valeur vénale - frais distribution (et traitement si nécessaire)</li>
+                <li>Sans valeur → frais d'évacuation ajoutés au coût de production.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CHAPITRE 6 : Imputation rationnelle -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>📐 Chapitre 6 • Imputation rationnelle</h2>
+            <div class="badge">CIR = activité réelle / activité normale</div>
+        </div>
+        <div class="content-inner">
+            <p>Coefficient d’imputation rationnelle (CIR) = <strong>Activité réelle / Activité normale</strong> → lissage des charges fixes.</p>
+            <table>
+                <thead><tr><th>Mois (act.norm=2000h)</th><th>Janv (2000h)</th><th>Fév (1800h)</th><th>Mars (2200h)</th></tr></thead>
+                <tbody>
+                    <tr><td>CIR</td><td>1</td><td>0,9</td><td>1,1</td></tr>
+                    <tr><td>Charges fixes incorporées</td><td>90 000</td><td>81 000</td><td>99 000</td></tr>
+                    <tr><td>Coût total IR</td><td>190 000</td><td>171 000</td><td>209 000</td></tr>
+                    <tr><td>Coût unitaire IR</td><td>95</td><td>95</td><td>95</td></tr>
+                    <tr><td>Différence d'incorporation</td><td>0</td><td>-9 000 (sous-activité)</td><td>+9 000 (boni)</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- CHAPITRE 7 : Coût variable et seuil rentabilité -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>📈 Chapitre 7 • Coût variable & seuil de rentabilité</h2>
+            <div class="badge">SR, point mort, marge de sécurité</div>
+        </div>
+        <div class="content-inner">
+            <p><strong>Compte de résultat différentiel :</strong> CA - Charges variables = MCV - Charges fixes = Résultat.</p>
+            <div class="example-box">
+                <strong>Application :</strong> CA = 150 000 DH, CV = 90 000, CF = 40 000<br>
+                → MCV = 60 000 DH (taux 40%) ; SR = CF / taux = 40 000 / 0,4 = <strong>100 000 DH</strong><br>
+                Point mort = (100 000/150 000)×360 = 240 jours → fin août<br>
+                Marge de sécurité = 150 000 - 100 000 = <strong>50 000 DH</strong>
+            </div>
+            <div class="highlight">
+                💡 SR = Charges fixes / Taux de marge sur coût variable ; Levier de gestion essentiel.
+            </div>
+        </div>
+    </div>
+
+    <!-- Tableaux récapitulatifs supplémentaires : synthèse formules -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>📌 Récapitulatif & formules clés</h2>
+            <div class="badge">à retenir</div>
+        </div>
+        <div class="content-inner">
+            <div class="grid-2col">
+                <div>
+                    <h4>🎯 Coût d'achat</h4>
+                    <p>Prix d'achat + charges accessoires d'achat + frais d'approvisionnement</p>
+                    <h4>📐 CMUP</h4>
+                    <p>(Valeur SI + entrées) / (Qté SI + entrées)</p>
+                    <h4>🏭 Coût de revient (industriel)</h4>
+                    <p>Coût production PF vendus + frais de distribution (commissions, pub, etc.)</p>
+                </div>
+                <div>
+                    <h4>⚖️ Résultat analytique</h4>
+                    <p>CA HT - Coût de revient</p>
+                    <h4>🧮 Imputation rationnelle</h4>
+                    <p>Coût IR = CV + (CF × CIR)</p>
+                    <h4>📆 Point mort</h4>
+                    <p>(SR / CA) × 360 jours</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- extra: cas détaillés PROLEC et ALPHA résumés-->
+    <div class="section-card">
+        <div class="section-header">
+            <h2>📘 Applications intégrales</h2>
+            <div class="badge">Exemples PROLEC & ALPHA</div>
+        </div>
+        <div class="content-inner">
+            <div class="example-box">
+                <h4>🔧 PROLEC Sarl (janvier 2021)</h4>
+                <p>Capital = 1 500 000 DH ; Achats MP 197 400 ; Loyers trim 7 200 ; Pénalité fiscale 2 500. Après mensualisation, charges CG = 607 960 DH. <br>
+                Charges supplétives capitaux = 15 000 DH, Charge d'usage (actuelle) = 1 400 DH/mois → <strong>CAE = 607 960 - 2 500 + 15 000 + 1 400 = 621 860 DH.</strong></p>
+            </div>
+            <div class="example-box" style="margin-top: 1rem;">
+                <h4>🏭 Alpha (récipients) – parcours complet</h4>
+                <p>CMUP plaques = 165,6 DH → coût production récipients = 128 520 DH (25,70/unité) ; CMUP récipients fin = 26,11 DH ; coût revient global = 193 995 DH ; résultat = 76 005 DH.</p>
+                <p><em>Démonstration de la traçabilité : coût d'achat → coût de production → coût de revient → résultat analytique</em></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        📖 Synthèse du cours Comptabilité Analytique (S4ECO) – Pr Youssef RACHID – FEG Settat 2025/2026<br>
+        Outil de pilotage interne : des coûts d'achat jusqu'au seuil de rentabilité.
+    </footer>
+</div>
+</body>
+</html>
